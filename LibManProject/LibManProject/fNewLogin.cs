@@ -10,29 +10,21 @@ using System.Windows.Forms;
 
 namespace LibManProject
 {
-    public partial class fLogin : Form
+    public partial class fNewLogin : Form
     {
-        public fLogin()
+        public fNewLogin()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Function for checking user.
-        /// Return 1 if user is an system admin
-        /// Return 2 if user is a libarian
-        /// Return 3 if user is a reader
-        /// Return 0 if that is a invalid login
-        /// </summary>
-        /// <returns></returns>
-        private int checkValidLogin(string username, string userpwd)
+        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
         {
-            /// temporary :") will add the server later 
 
-            if (username.Equals("admin") && userpwd.Equals("admin")) return 1;
-            if (username.Equals("libarian") && userpwd.Equals("libarian")) return 2;
-            if (username.Equals("reader") && userpwd.Equals("reader")) return 3;
-            return 0;
+        }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void clearTextboxs()
@@ -41,6 +33,13 @@ namespace LibManProject
             txtUserpwd.Text = "";
             txtUsername.Focus();
         }
+        private int checkValidLogin (string username, string userpwd)
+        {
+            if (username.Equals("admin") && userpwd.Equals("admin")) return 1;
+            if (username.Equals("libarian") && userpwd.Equals("libarian")) return 2;
+            if (username.Equals("reader") && userpwd.Equals("reader")) return 3;
+            return 0;
+        }
         private void butLogin_Click(object sender, EventArgs e)
         {
             try
@@ -48,7 +47,7 @@ namespace LibManProject
                 string username = txtUsername.Text;
                 string userpwd = txtUserpwd.Text;
                 int check = checkValidLogin(username, userpwd);
-                switch(check)
+                switch (check)
                 {
                     case 0:
                         MessageBox.Show("Invalid username or password!!", "",
@@ -69,11 +68,11 @@ namespace LibManProject
                     case 3:
                         break;
                     default:
-                        MessageBox.Show("Some errors occur! Returned value of checkValidLogin() is invalid", 
+                        MessageBox.Show("Some errors occur! Returned value of checkValidLogin() is invalid",
                                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
-                
+
             }
             catch
             {
@@ -84,7 +83,6 @@ namespace LibManProject
             {
                 /// close connection to server here. Later :")
             }
-
         }
 
         private void butExit_Click(object sender, EventArgs e)
@@ -95,11 +93,5 @@ namespace LibManProject
                 this.Close();
             else this.clearTextboxs();
         }
-
-        private void butClr_Click(object sender, EventArgs e)
-        {
-            this.clearTextboxs();
-        }
-
     }
 }

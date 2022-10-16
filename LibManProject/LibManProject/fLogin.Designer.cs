@@ -129,7 +129,7 @@
             // 
             this.txtUserpwd.Location = new System.Drawing.Point(150, 15);
             this.txtUserpwd.Name = "txtUserpwd";
-            this.txtUserpwd.Size = new System.Drawing.Size(205, 22);
+            this.txtUserpwd.Size = new System.Drawing.Size(208, 22);
             this.txtUserpwd.TabIndex = 1;
             this.txtUserpwd.UseSystemPasswordChar = true;
             // 
@@ -185,9 +185,10 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Variable Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(150, 15);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(206, 22);
+            this.txtUsername.Size = new System.Drawing.Size(206, 25);
             this.txtUsername.TabIndex = 1;
             // 
             // label1
@@ -248,24 +249,23 @@
 
         #endregion
         private string username;
-
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUserpwd;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button butLogin;
         private System.Windows.Forms.Button butClr;
         private System.Windows.Forms.Button butExit;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtUserpwd;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
 
         public string Username { get => username; set => username = value; }
     }
