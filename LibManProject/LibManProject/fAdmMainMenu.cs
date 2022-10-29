@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibManProject.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,14 @@ namespace LibManProject
         {
             fLogin login = new fLogin();
             this.Close();
+        }
+
+        private void butHome_Click(object sender, EventArgs e)
+        {
+            butHome.BackColor = Color.Gray;
+            /// gọi UserControl để hiển thị trong container panel
+            UCHome uchome = new UCHome();
+            containerPanel.Controls.Add(uchome);
         }
     }
 }

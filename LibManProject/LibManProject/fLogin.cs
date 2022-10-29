@@ -48,7 +48,7 @@ namespace LibManProject
                 string username = txtUsername.Text;
                 string userpwd = txtUserpwd.Text;
                 int check = checkValidLogin(username, userpwd);
-                switch(check)
+                switch (check)
                 {
                     case 0:
                         MessageBox.Show("Invalid username or password!!", "",
@@ -69,11 +69,11 @@ namespace LibManProject
                     case 3:
                         break;
                     default:
-                        MessageBox.Show("Some errors occur! Returned value of checkValidLogin() is invalid", 
+                        MessageBox.Show("Some errors occur! Returned value of checkValidLogin() is invalid",
                                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
-                
+
             }
             catch
             {
@@ -87,19 +87,7 @@ namespace LibManProject
 
         }
 
-        private void butExit_Click(object sender, EventArgs e)
-        {
-            DialogResult ans;
-            ans = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ans == DialogResult.Yes)
-                this.Close();
-            else this.clearTextboxs();
-        }
 
-        private void butClr_Click(object sender, EventArgs e)
-        {
-            this.clearTextboxs();
-        }
 
     }
 }
