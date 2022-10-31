@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace LibManProject.UserControls
 {
-    public partial class UCHome : UserControl
+    public partial class UCQls : UserControl
     {
-        public UCHome()
+        public UCQls()
         {
             InitializeComponent();
         }
-
     }
 }

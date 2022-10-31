@@ -1,4 +1,6 @@
-﻿namespace LibManProject
+﻿using LibManProject.UserControls;
+
+namespace LibManProject
 {
     partial class fAdmMainMenu
     {
@@ -28,177 +30,238 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuPanel = new System.Windows.Forms.Panel();
-            this.butQLQD = new System.Windows.Forms.Button();
-            this.butQLS = new System.Windows.Forms.Button();
-            this.butQLND = new System.Windows.Forms.Button();
-            this.butHome = new System.Windows.Forms.Button();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.butLogout = new System.Windows.Forms.Button();
-            this.butAccount = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.menuPanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.mainContainer = new System.Windows.Forms.Panel();
+            this.centralContainer = new System.Windows.Forms.Panel();
+            this.tabControl = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
+            this.tabHome = new System.Windows.Forms.TabPage();
+            this.tabAccount = new System.Windows.Forms.TabPage();
+            this.headerContainer = new System.Windows.Forms.Panel();
+            this.minimizeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.maximizeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.exitControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
+            this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.mainContainer.SuspendLayout();
+            this.centralContainer.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.headerContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // mainContainer
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.menuPanel);
-            this.panel1.Controls.Add(this.containerPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1419, 838);
-            this.panel1.TabIndex = 0;
+            this.mainContainer.AutoSize = true;
+            this.mainContainer.Controls.Add(this.centralContainer);
+            this.mainContainer.Controls.Add(this.headerContainer);
+            this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainContainer.Location = new System.Drawing.Point(0, 0);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.mainContainer.Name = "mainContainer";
+            this.mainContainer.Size = new System.Drawing.Size(1064, 681);
+            this.mainContainer.TabIndex = 0;
             // 
-            // menuPanel
+            // centralContainer
             // 
-            this.menuPanel.Controls.Add(this.butQLQD);
-            this.menuPanel.Controls.Add(this.butQLS);
-            this.menuPanel.Controls.Add(this.butQLND);
-            this.menuPanel.Controls.Add(this.butHome);
-            this.menuPanel.Location = new System.Drawing.Point(3, 89);
-            this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(186, 749);
-            this.menuPanel.TabIndex = 2;
+            this.centralContainer.Controls.Add(this.tabControl);
+            this.centralContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centralContainer.Location = new System.Drawing.Point(0, 48);
+            this.centralContainer.Name = "centralContainer";
+            this.centralContainer.Size = new System.Drawing.Size(1064, 633);
+            this.centralContainer.TabIndex = 1;
             // 
-            // butQLQD
+            // tabControl
             // 
-            this.butQLQD.BackColor = System.Drawing.Color.Transparent;
-            this.butQLQD.FlatAppearance.BorderSize = 0;
-            this.butQLQD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butQLQD.Location = new System.Drawing.Point(3, 228);
-            this.butQLQD.Name = "butQLQD";
-            this.butQLQD.Size = new System.Drawing.Size(180, 69);
-            this.butQLQD.TabIndex = 0;
-            this.butQLQD.Text = "Quản lý quy định";
-            this.butQLQD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butQLQD.UseVisualStyleBackColor = false;
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl.Controls.Add(this.tabHome);
+            this.tabControl.Controls.Add(this.tabAccount);
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ItemSize = new System.Drawing.Size(180, 40);
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1064, 633);
+            this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(154)))), ((int)(((byte)(171)))));
+            this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tabControl.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.tabControl.TabIndex = 0;
+            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             // 
-            // butQLS
+            // tabHome
             // 
-            this.butQLS.BackColor = System.Drawing.Color.Transparent;
-            this.butQLS.FlatAppearance.BorderSize = 0;
-            this.butQLS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butQLS.Location = new System.Drawing.Point(3, 153);
-            this.butQLS.Name = "butQLS";
-            this.butQLS.Size = new System.Drawing.Size(180, 69);
-            this.butQLS.TabIndex = 0;
-            this.butQLS.Text = "Quản lý sách";
-            this.butQLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butQLS.UseVisualStyleBackColor = false;
+            this.tabHome.Location = new System.Drawing.Point(184, 4);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHome.Size = new System.Drawing.Size(876, 625);
+            this.tabHome.TabIndex = 0;
+            this.tabHome.Text = "Trang chủ";
+            this.tabHome.UseVisualStyleBackColor = true;
             // 
-            // butQLND
+            // tabAccount
             // 
-            this.butQLND.BackColor = System.Drawing.Color.Transparent;
-            this.butQLND.FlatAppearance.BorderSize = 0;
-            this.butQLND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butQLND.Location = new System.Drawing.Point(3, 78);
-            this.butQLND.Name = "butQLND";
-            this.butQLND.Size = new System.Drawing.Size(180, 69);
-            this.butQLND.TabIndex = 0;
-            this.butQLND.Text = "Quản lý người dùng";
-            this.butQLND.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butQLND.UseVisualStyleBackColor = false;
+            this.tabAccount.Location = new System.Drawing.Point(184, 4);
+            this.tabAccount.Name = "tabAccount";
+            this.tabAccount.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAccount.Size = new System.Drawing.Size(876, 625);
+            this.tabAccount.TabIndex = 1;
+            this.tabAccount.Text = "Tài khoản";
+            this.tabAccount.UseVisualStyleBackColor = true;
             // 
-            // butHome
+            // headerContainer
             // 
-            this.butHome.BackColor = System.Drawing.Color.Transparent;
-            this.butHome.FlatAppearance.BorderSize = 0;
-            this.butHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butHome.Location = new System.Drawing.Point(3, 3);
-            this.butHome.Name = "butHome";
-            this.butHome.Size = new System.Drawing.Size(180, 69);
-            this.butHome.TabIndex = 0;
-            this.butHome.Text = "Trang chủ";
-            this.butHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butHome.UseVisualStyleBackColor = false;
-            this.butHome.Click += new System.EventHandler(this.butHome_Click);
+            this.headerContainer.Controls.Add(this.minimizeControlBox);
+            this.headerContainer.Controls.Add(this.maximizeControlBox);
+            this.headerContainer.Controls.Add(this.exitControlBox);
+            this.headerContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerContainer.Location = new System.Drawing.Point(0, 0);
+            this.headerContainer.Name = "headerContainer";
+            this.headerContainer.Size = new System.Drawing.Size(1064, 48);
+            this.headerContainer.TabIndex = 0;
             // 
-            // containerPanel
+            // minimizeControlBox
             // 
-            this.containerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.containerPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.containerPanel.Location = new System.Drawing.Point(196, 90);
-            this.containerPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(1220, 748);
-            this.containerPanel.TabIndex = 1;
+            this.minimizeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.minimizeControlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.minimizeControlBox.IconColor = System.Drawing.Color.White;
+            this.minimizeControlBox.Location = new System.Drawing.Point(935, 0);
+            this.minimizeControlBox.Name = "minimizeControlBox";
+            this.minimizeControlBox.Size = new System.Drawing.Size(45, 29);
+            this.minimizeControlBox.TabIndex = 2;
             // 
-            // topPanel
+            // maximizeControlBox
             // 
-            this.topPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.topPanel.Controls.Add(this.butLogout);
-            this.topPanel.Controls.Add(this.butAccount);
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1419, 84);
-            this.topPanel.TabIndex = 1;
+            this.maximizeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizeControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.maximizeControlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.maximizeControlBox.IconColor = System.Drawing.Color.White;
+            this.maximizeControlBox.Location = new System.Drawing.Point(977, 0);
+            this.maximizeControlBox.Name = "maximizeControlBox";
+            this.maximizeControlBox.Size = new System.Drawing.Size(45, 29);
+            this.maximizeControlBox.TabIndex = 1;
             // 
-            // butLogout
+            // exitControlBox
             // 
-            this.butLogout.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butLogout.BackColor = System.Drawing.Color.Transparent;
-            this.butLogout.FlatAppearance.BorderSize = 0;
-            this.butLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butLogout.Location = new System.Drawing.Point(1322, 8);
-            this.butLogout.Name = "butLogout";
-            this.butLogout.Size = new System.Drawing.Size(94, 69);
-            this.butLogout.TabIndex = 0;
-            this.butLogout.Text = "Đăng xuất";
-            this.butLogout.UseVisualStyleBackColor = false;
-            this.butLogout.Click += new System.EventHandler(this.butLogout_Click);
+            this.exitControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitControlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.exitControlBox.IconColor = System.Drawing.Color.White;
+            this.exitControlBox.Location = new System.Drawing.Point(1019, 0);
+            this.exitControlBox.Name = "exitControlBox";
+            this.exitControlBox.Size = new System.Drawing.Size(45, 29);
+            this.exitControlBox.TabIndex = 0;
             // 
-            // butAccount
+            // siticoneBorderlessForm1
             // 
-            this.butAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butAccount.BackColor = System.Drawing.Color.Transparent;
-            this.butAccount.FlatAppearance.BorderSize = 0;
-            this.butAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAccount.Location = new System.Drawing.Point(1127, 5);
-            this.butAccount.Name = "butAccount";
-            this.butAccount.Size = new System.Drawing.Size(189, 78);
-            this.butAccount.TabIndex = 0;
-            this.butAccount.Text = "Acount";
-            this.butAccount.UseVisualStyleBackColor = false;
+            this.siticoneBorderlessForm1.BorderRadius = 1;
+            this.siticoneBorderlessForm1.ContainerControl = this;
+            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // siticoneDragControl1
+            // 
+            this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneDragControl1.TargetControl = this.headerContainer;
+            this.siticoneDragControl1.TransparentWhileDrag = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(184, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(876, 625);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(184, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(876, 625);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(184, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(876, 625);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // fAdmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 838);
-            this.Controls.Add(this.topPanel);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.mainContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "fAdmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.menuPanel.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
+            this.mainContainer.ResumeLayout(false);
+            this.centralContainer.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.headerContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void InitializeUC()
+        {
+            /// init UCs
+            ucHome = new UCHome();
+            ucAccount = new UCAccount();
+            ucQLND = new UCQlnd();
+            ucQLS = new UCQls();
+            ucQLQD = new UCQlqd(); 
+        }
+
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.Panel menuPanel;
-        private System.Windows.Forms.Button butHome;
-        private System.Windows.Forms.Button butAccount;
-        private System.Windows.Forms.Button butLogout;
-        private System.Windows.Forms.Button butQLQD;
-        private System.Windows.Forms.Button butQLS;
-        private System.Windows.Forms.Button butQLND;
+        private System.Windows.Forms.Panel mainContainer;
+        private UCHome ucHome;
+        private UCAccount ucAccount;
+        private UCQlnd ucQLND;
+        private UCQls ucQLS;
+        private UCQlqd ucQLQD;
+        private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
+        private System.Windows.Forms.Panel centralContainer;
+        private System.Windows.Forms.Panel headerContainer;
+        private Siticone.Desktop.UI.WinForms.SiticoneControlBox minimizeControlBox;
+        private Siticone.Desktop.UI.WinForms.SiticoneControlBox maximizeControlBox;
+        private Siticone.Desktop.UI.WinForms.SiticoneControlBox exitControlBox;
+        private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTabControl tabControl;
+        private System.Windows.Forms.TabPage tabHome;
+        private System.Windows.Forms.TabPage tabAccount;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

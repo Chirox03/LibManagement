@@ -91,6 +91,9 @@
     <Reference Include="OpenHtmlToPdf, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenHtmlToPdf.1.12.0.0\lib\net45\OpenHtmlToPdf.dll</HintPath>
     </Reference>
+    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -120,11 +123,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAccount.Designer.cs">
+      <DependentUpon>UCAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCHome.Designer.cs">
       <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCQlnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCQlnd.Designer.cs">
+      <DependentUpon>UCQlnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCQlqd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCQlqd.Designer.cs">
+      <DependentUpon>UCQlqd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCQls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCQls.Designer.cs">
+      <DependentUpon>UCQls.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fAdmMainMenu.resx">
       <DependentUpon>fAdmMainMenu.cs</DependentUpon>
@@ -143,8 +170,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCAccount.resx">
+      <DependentUpon>UCAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCQlnd.resx">
+      <DependentUpon>UCQlnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCQlqd.resx">
+      <DependentUpon>UCQlqd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCQls.resx">
+      <DependentUpon>UCQls.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
