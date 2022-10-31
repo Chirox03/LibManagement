@@ -13,10 +13,14 @@ namespace LibManProject
 {
     public partial class fAdmMainMenu : Form
     {
+
         public fAdmMainMenu(string username)
         {
             InitializeComponent();
-            butAccount.Text = username;
+            InitializeUC();
+            //this.containerPanel.Controls.Add(ucHome);
+
+            //butAccount.Text = username;
             this.Username = username;
         }
 
@@ -24,16 +28,12 @@ namespace LibManProject
 
         private void butLogout_Click(object sender, EventArgs e)
         {
-            fLogin login = new fLogin();
-            this.Close();
+            //fLogin login = new fLogin();
+            DialogResult result;
+            result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) this.Close();
         }
 
-        private void butHome_Click(object sender, EventArgs e)
-        {
-            butHome.BackColor = Color.Gray;
-            /// gọi UserControl để hiển thị trong container panel
-            UCHome uchome = new UCHome();
-            containerPanel.Controls.Add(uchome);
-        }
+
     }
 }
